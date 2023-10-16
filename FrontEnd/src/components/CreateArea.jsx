@@ -60,7 +60,6 @@ function CreateArea(props) {
           name="title"
           onChange={handleChange}
           value={note.title}
-          // placeholder="Category"
           required="required"
         />
         <span>Category</span>
@@ -72,7 +71,6 @@ function CreateArea(props) {
           onClick={expand}
           onChange={handleChange}
           value={note.content}
-          // placeholder="Your items ..."
           required="required"
           rows={isExpanded ? 5 : 1}
         />
