@@ -7,13 +7,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-
-// var Items = [];
-
-// app.get("/api",function(req,res){
-//     // res.json({message:""})
-// });
-
 app.post("/api/items", async(req,res) =>{
     const ItemsDataTitle = req.body.title;
     const ItemsDataContent = req.body.content;
@@ -23,10 +16,7 @@ app.post("/api/items", async(req,res) =>{
         ItemsDataContent:ItemsDataContent
     }
 
-    await collection.create([data]);
-    // Items.push(items);
-    // console.log(Items);
-   
+    await collection.insertMany([data]);
 })
 
 app.listen(5000, function(req,res){
