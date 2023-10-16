@@ -30,9 +30,6 @@ function App() {
   return (
     <div className="App">
         <Header />
-        {/* <p>
-          {!data ? "Loading..." : data}
-        </p> */}
         <CreateArea onAdd={addNote} />
         {notes.map((noteItem, index) => {
           return (
@@ -54,13 +51,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-// const [data, setData] = useState(null);
-// .then((res) => res.json())
-      // .then((data) => setData(data.message))
